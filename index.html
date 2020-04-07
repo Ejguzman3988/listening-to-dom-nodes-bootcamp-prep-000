@@ -37,5 +37,22 @@
         </div>
       </div>
     </div>
+    <script>
+      let divs = document.querySelectorAll('div');
+ 
+      function favNum(event){
+        event.stopPropagation();
+        
+        if (this.firstChild.nodeValue.trim() === '4'){
+          alert(this.firstChild.nodeValue.trim() + ' is my favorite number!')
+        }else{
+          console.log(this.firstChild.nodeValue.trim() + ' is not my favorite number. ')
+        }
+      }
+      
+      for (let i = 0; i < divs.length; i++){
+        divs[i].addEventListener('click', favNum);
+      }
+    </script>
   </body>
 </html>
