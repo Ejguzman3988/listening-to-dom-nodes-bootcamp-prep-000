@@ -40,9 +40,17 @@
     <script>
       let divs = document.querySelectorAll('div');
  
-      divs.addEventListener('click', function(event) {
-        alert('I was clicked!');
-      });
+      function favNum(event){
+        if (this.firstChild.nodeValue.trim() === '4'){
+          console.log(this.firstChild.nodeValue.trim() + ' is my favorite number!')
+        }else{
+          console.log(this.firstChild.nodeValue.trim() + ' is not my favorite number. ')
+        }
+      }
+      
+      for (let i = 0; i < divs.length; i++){
+        divs[i].addEventListener('click', favNum);
+      }
     </script>
   </body>
 </html>
