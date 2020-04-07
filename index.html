@@ -38,7 +38,11 @@
       </div>
     </div>
     <script>
-      
+      const divs = document.querySelector('div');
+ 
+      divs.addEventListener('click', function(event) {
+        alert('I was clicked!');
+      });
     </script>
   </body>
 </html>
