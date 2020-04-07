@@ -41,6 +41,8 @@
       let divs = document.querySelectorAll('div');
  
       function favNum(event){
+        event.stopPropagation();
+        
         if (this.firstChild.nodeValue.trim() === '4'){
           console.log(this.firstChild.nodeValue.trim() + ' is my favorite number!')
         }else{
